@@ -30,14 +30,13 @@ public class LogDetailsController {
         return "False";
     }
 
-   @RequestMapping("/")
+   /*@RequestMapping("/")
     public Logger fff(Long id){
-        sysUserRepository.findById(id);
         Logger logger=new Logger();
         logger.setPassword("123456798");
         logger.setName("zhang");
         return logger;
-    }
+    }*/
    /* @RequestMapping("/login")
     public String loadUserByUsername(){
         Logger loggerclient=new Logger();

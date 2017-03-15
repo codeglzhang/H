@@ -10,5 +10,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface SysUserRepository extends JpaRepository<User,String> {
     User findByAddress(String address);
     User findByMail(String mail);
-    User findById(Long id);
 }
