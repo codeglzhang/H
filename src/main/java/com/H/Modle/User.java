@@ -16,7 +16,7 @@ public class User {
     private String name;
     private String address;
     private String Phone;
-    private String Password;
+    private String password;
     private String mail;
 
     public User() {
@@ -63,10 +63,10 @@ public class User {
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        password = password;
     }
 }

@@ -1,6 +1,5 @@
 package com.H.Controller;
 
-import com.H.Modle.Logger;
 import com.H.Modle.RegisterMap;
 import com.H.Modle.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +20,7 @@ public class RegisterController {
     JavaMailSender mailSender;
     @Autowired
     SysUserRepository sysUserRepository;
-    @Autowired
-    LoggerRepository loggerRepository;
+
     @Autowired
     RegisterMap registerMap;
 
@@ -81,11 +79,7 @@ public class RegisterController {
             //将用户的详细信息加入数据库
             User user=registerMap.getRegistermap().get(key);
             sysUserRepository.save(user);
-            //将用户登录信息加入数据库
-            Logger logger=new Logger();
-            logger.setName(user.getMail());
-            logger.setPassword(user.getPassword());
-            loggerRepository.save(logger);
+
             //从缓冲区移除此用户信息
             registerMap.getRegistermap().remove(key);
             return "success";
