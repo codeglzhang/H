@@ -16,7 +16,7 @@ public interface SysUserRepository extends JpaRepository<User,Long> {
     User findByAddress(String address);
     User findByMail(String mail);
     User findByName(String name);
-
+    User findByPassword(String password);
     @Query("select u from User u where u.name= :name and u.password= :password")
     User findByNameAndPassword(@Param("name") String name, @Param("password") String password);
 }
